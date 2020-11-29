@@ -126,6 +126,12 @@ header .main-hero:before {
     opacity: 0.3;
 }
 
+@media screen and (max-width: 64rem){
+    header .main-hero{
+        padding: 1.5rem 0;
+    }
+}
+
 main #edu {
     padding: 5rem 0;
 }
