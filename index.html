@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Playfair+Display:wght@600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous"/>
+    <link href="css/style.css" rel="stylesheet">
+    <title>Ramkumar | Django Developer</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand">
+                <img src="images/logo.jpg" alt="logo" class="img-fluid" width="40" height="40">
+            </a>
+            <button class="navbar-toggler" aria-label="Toggle Icon" aria-expanded="false"
+                    aria-controls="mynavbar" data-target="#mynavbar" data-toggle="collapse">
+                <img src="https://img.icons8.com/office/30/000000/menu--v3.png"/>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#main" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#edu" class="nav-link">Edu</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">My Portfolio</a></li>
+                    <!--                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="main">
+        <div class="main-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 info">
+
+                        <div class="card one">
+
+                            <div class="card-body">
+                                <img src="https://img.icons8.com/plasticine/200/000000/user.png" class=""
+                                     alt="user-icon" width="60" height="60">
+                                <h3 class="card-title">Hey! I'm Ramkumar</h3>
+                                <p class="text-muted">Django Developer & AWS Architect</p>
+
+                                <div class="general-info">
+                                    <img width="35" height="35"
+                                         src="data:image/png;base64,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">
+                                    <span> Web and Cloud Developer</span>
+                                </div>
+                                <div class="general-info">
+                                    <img src="https://img.icons8.com/color/96/000000/email.png" width="35"
+                                         height="35">
+                                    <span> ramkumar.dj15@gmail.com</span>
+                                </div>
+                                <div class="general-info">
+                                    <img src="images/phone.svg" width="35"
+                                         height="35">
+                                    <span> +91 8667585924</span>
+                                </div>
+                                <div class="general-info">
+                                    <img src="images/location-marker.svg" width="35"
+                                         height="35">
+                                    <span> Tirunelveli, TN, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card two">
+                            <div class="card-body">
+                                <p class="card-text">Download my CV</p>
+                                <a href="cv/MRamkumarResume.pdf" class="btn" download="resume"><span><img
+                                        src="https://img.icons8.com/ultraviolet/50/000000/parse-from-clipboard.png"
+                                        width="20" height="20"/></span> MY CV</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 info">
+
+                    </div>
+                </div>
+            </div>
+            <div class="bg-overlay"></div>
+        </div>
+    </section>
+</header>
+<main>
+    <section id="edu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Education</h1>
+                </div>
+                <div class="col-md-9 m-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="badge badge-info">2014</span>
+                            <h3 class="card-title">St. Francis Xavier's Higher Secondary School</h3>
+                            <span class="text-muted">10th Grade</span>
+                            <p>Percentage:<span class="text-muted"> 94.4%</span></p>
+                            <p>Location:<span class="text-muted"> Thoothukudi, TN</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 m-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="badge badge-info">2017</span>
+                            <h3 class="card-title">St. Francis Xavier's Higher Secondary School</h3>
+                            <span class="text-muted">12th Grade</span>
+                            <p>Percentage:<span class="text-muted"> 89%</span></p>
+                            <p>Location:<span class="text-muted"> Thoothukudi, TN</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 m-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="badge badge-info">2017 - 2020(present)</span>
+                            <h3 class="card-title">Kamaraj College of Engineering and Technology</h3>
+                            <span class="text-muted">B.E Computer Science Engineering</span>
+                            <p>CGPA:<span class="text-muted"> 7 (upto V Semester)</span>
+                            <p>Location:<span class="text-muted"> Virudhunagar, TN</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="my-info">
+                        <h3>Some information about me</h3>
+                        <h5>At First, I introduce Myself</h5>
+                        <p class="text-muted mb-3">Hello, I'm Ramkumar. I'm a Django Web developer. Innovative and
+                            Self-taught Web Developer. Currently, Now, I am a B.E CSE Final year Student at Kamaraj
+                            College of Engineering and technology. A seasoned expert in languages such as HTML, CSS, and
+                            Bootstrap(CSS Framework) as well as scripting languages JavaScript. Having some knowledge of
+                            cloud technologies like Amazon Web Services</p>
+                        <p class="text-muted">Apart from the profession, I would like to play cricket and do workouts to
+                            maintain my physical and mental fitness</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="col-md-12 skill">
+                        <div class="skill-info clearfix">
+                            <h5>HTML & CSS</h5>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                 aria-valuemax="90" style="width: 90%;"></div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 skill">
+                        <div class="skill-info clearfix">
+                            <h5>JavaScript</h5>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="50" style="width: 50%;">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 skill">
+                        <div class="skill-info clearfix">
+                            <h5>CSS Framework - Bootstrap</h5>
+                            <span>70%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="75" style="width: 75%;">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 skill">
+                        <div class="skill-info clearfix">
+                            <h5>JS Libaries - jQuery</h5>
+                            <span>40%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                                 aria-valuemax="40" style="width: 40%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 skill">
+                        <div class="skill-info clearfix">
+                            <h5>Python</h5>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="50" style="width: 50%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 skill">
+                        <div class="skill-info clearfix">
+                            <h5>Django</h5>
+                            <span>45%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="45" style="width: 45%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 skill">
+                        <div class="skill-info clearfix">
+                            <h5>AWS</h5>
+                            <span>40%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="40" style="width: 40%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 skill">
+                        <div class="skill-info clearfix">
+                            <h5>Wordpress</h5>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="50" style="width: 50%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 portfolio-title">
+                    <h3>Portfolio</h3>
+                    <p class="text-muted">Check my recent works</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="card">
+                            <img src="images/landing-page-1.png" class="card-img-top" width="150" height="180">
+                            <div class="card-img-overlay">
+                                <!-- <span class="badge badge-info">landing page</span> -->
+                                <h4 class="card-title">EasyBank landingPage</h4>
+                                <a href="http://ramkumardj.me/easybank.github.io/" target="_blank">Check out</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="images/landing-page-2.png" class="card-img-top" width="150" height="180">
+                            <div class="card-img-overlay">
+                                <!-- <span class="badge badge-info">landing page</span> -->
+                                <h3 class="card-title">Landing Page 2</h3>
+                                <a href="http://ramkumardj.me/insure-landing-page-master.github.io/" target="_blank">Check out</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="images/contactform.png" class="card-img-top" width="150" height="180">
+                            <div class="card-img-overlay">
+                                <!-- <span class="badge badge-info">landing page</span> -->
+                                <h3 class="card-title">Contact Form using Django and sendgrid</h3>
+                                <a href="https://contact-form-email.herokuapp.com/" target="_blank">Check out</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="images/landing-page-2.png" class="card-img-top" width="150" height="180">
+                            <div class="card-img-overlay">
+                                <!-- <span class="badge badge-info">landing page</span> -->
+                                <h3 class="card-title">Landing Page 2</h3>
+                                <a href="http://ramkumardj.me/insure-landing-page-master.github.io/">Check out</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script crossorigin="anonymous"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
